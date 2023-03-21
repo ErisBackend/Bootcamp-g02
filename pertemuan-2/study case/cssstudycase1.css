@@ -34,6 +34,11 @@ body{
     bottom: 0px;
 }
 
+.poto1{
+    width: 75px;
+    height: 75px;
+}
+
 .hitam2{
     width: 75px;
     height: 75px;
@@ -41,4 +46,12 @@ body{
     position: absolute;
     top: 70px;
     right: 350px;
+}
+
+.poto2{
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
 }
