@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .body{
+            background-color: black;
+        }
+        .tes{
+            color: red;
+        }
+    </style>
+</head>
+<body class="body">
+    <h1 class="tes">halo guys</h1>
+    <button class="btn">clik</button>
+
+    <script>
+        let tombol = document.querySelector('.btn')
+        let judul = document.querySelector('h1')
+        let body = document.querySelector('body')
+
+        tombol.addEventListener('click',function(){
+            judul.classList.toggle('tes')
+            body.classList.toggle('body')
+            
+        })
+        
+
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todolist.css">
+</head>
+<body>
+    <div class="container">
+        <section class="sec">
+            <div class="h1">
+                <div class="nav">
+                    <h1 class="judul">To Do List</h1>
+                    <h2 class="judul2">ketik dan simpan !!</h2>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container2">
+        <form action="#">
+            <input type="text" id="tulis">
+            <button onclick="add()">Tambahkan</button>
+        </form>
+
+        <ul id="lis">
+
+        </ul>
+    </div>
+    
+
+    <script>
+        const lis = document.getElementById('lis')
+        function add(){
+            //ambil nilai atau dari inputan type text
+            let tulis = document.getElementById('tulis')
+            // console.log(tulis.value); 
+            let newtulis = "<li> <span>" + tulis.value + "</span>"+
+                            "<span onclick='removeItem(this)'>"+" [x] "+"</span>" +
+                            "</li>"
+            //console.log(newtext)
+            lis.insertAdjacentHTML('afterbegin',newtulis)
+            
+            
+            tulis.value =''
+
+            function removeItem(el){
+                el.parentElement.removeItem()
+            }
+        }
+
+    </script>
+</body>
+</html>

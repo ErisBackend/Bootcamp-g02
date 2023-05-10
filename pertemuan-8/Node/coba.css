@@ -1,0 +1,37 @@
+.box{
+    width: 600px;
+    height: 150px;
+    margin: auto;
+    background-image: url(gb.png);
+    border-radius: 50px;
+ 
+}
+.form{
+    width: 400px;
+    height: auto;
+    margin: auto;
+}
+.todo{
+    width: 300px;
+    padding-left: 10px;
+
+}
+.prev{
+    margin-left: 10px;
+    color: white;
+}
+.judul{
+    margin-left: 140px;
+    padding-top: 10px;
+    color: beige;
+}
+.ol{
+    background-color: rgb(250, 246, 246);
+}
+.box2{
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    background-color: rgb(243, 242, 237);
+    border-radius: 50px;
+}

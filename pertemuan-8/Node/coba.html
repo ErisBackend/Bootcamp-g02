@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="coba.css">
+</head>
+<body>
+    
+        <div class="box2">
+            <div class="box">
+                <form class="form" action="">
+                    <h1 class="judul">Todolist</h1>
+                    <input type="text" class="todo" placeholder="masukkan lah...!">
+                    <button class="btn">ok</button><br>
+                    <small ><i class="prev">preview</i></small><br>
+                    
+                    
+                    <hr>
+                    <ol class="ol">
+                    </ol>
+                </form>
+        </div>
+    </div>
+    
+    
+
+    <script>
+        let todo = []
+        let index = (todo.length<1)?0:todo.length
+        let inputan = document.querySelector('.todo')
+        let List = document.querySelector('ol')
+        let preview = document.querySelector('i')
+        let form = document.querySelector('form')
+
+        let coba = (e) => {
+            console.log(index)
+            e.preventDefault()
+            todo.push('<li class = "list-'+ index +'">' 
+            + inputan.value + 
+            '-<button onclick ="apus('+index+')"> hapus </button><button onclick = "edit('+index+')">edit</button></li>')
+            inputan.value = ""
+            List.innerHTML = todo.join('')
+            index = (todo.length<1)?0:todo.length
+        }
+
+        let apus =(e) => {
+            todo.splice(e,1)
+            List.innerHTML = todo.join('')
+            index = (todo.length<1)?0:todo.length
+
+        }
+
+        let edit =(e) => {
+            console.log(e)
+            let popup = prompt('masukkan editan')
+            // console.log('ini edit')
+
+            todo[e] = '<li class = "list-'+ index +'">' 
+            + popup + 
+            '-<button onclick ="apus('+e+')"> hapus </button><button onclick = "edit('+e+')">edit</button></li>'
+         
+            List.innerHTML = todo.join('')
+            index = (todo.length<1)?0:todo.length
+        }
+    
+            
+
+        form.addEventListener('submit',coba)
+        inputan.addEventListener('input',() => {
+            preview.innerHTML = inputan.value
+        })
+        </script>
+</body>
+</html>

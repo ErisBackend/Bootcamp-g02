@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="studycase1.css">
+</head>
+<body>
+    <div class="nav">
+        <ul class="ul">
+            <li class="li"><a class="a" href="">Home</a></li>
+            <li class="li1"><a class="a1" href="">Menu</a>
+                <ul class="ul2">
+                    <li class="li2"> <a href="https://github.com/nrisa" >menu1</a></li>
+                    <li class="li2"> <a href="https://github.com/nrisa" >menu2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        let mouse = document.querySelector('.li1')
+        let ul2 = document.querySelector('.ul2')
+
+    
+
+        mouse.addEventListener('mouseenter',function(){
+        ul2.classList.remove('ul2')
+        })
+        mouse.addEventListener('mouseleave',function(){
+        ul2.classList.add('ul2')
+        })
+     
+
+        
+     
+    </script>
+</body>
+</html>
